@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPI Payment Redirect</title>
+    <script>
+        function redirectToPayment() {
+            const paymentUrl = "upi://pay?pa=harekrishna1994@kotak&pn=ISKCON%20VRINDAVAN&am=0&cu=INR&tn=Helping%20people";
+            window.location.href = paymentUrl;
+        }
+    </script>
+</head>
+<body onload="redirectToPayment()">
+    <p>Redirecting to payment...</p>
+</body>
+</html>
