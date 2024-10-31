@@ -10,7 +10,6 @@
             window.location.href = paymentUrl;
         }
 
-        // Attempt an automatic redirect after a short delay
         window.onload = function() {
             setTimeout(redirectToPayment, 1000);
         };
@@ -19,8 +18,9 @@
 <body>
     <p>Redirecting to payment...</p>
     <p>If you are not redirected, click the button below to initiate the UPI payment manually:</p>
-    <a href="upi://pay?pa=harekrishna1994@kotak&pn=ISKCON%20VRINDAVAN&am=0&cu=INR&tn=Helping%20people" style="text-decoration: none;">
-        <button style="padding: 10px 20px; font-size: 16px;">Pay Now</button>
+    <a href="upi://pay?pa=harekrishna1994@kotak&pn=ISKCON%20VRINDAVAN&am=0&cu=INR&tn=Helping%20people" target="_blank" style="text-decoration: none;">
+        <button onclick="redirectToPayment()" style="padding: 10px 20px; font-size: 16px;">Pay Now</button>
     </a>
+    <p>If the payment app doesn’t open, please try again in a mobile browser.</p>
 </body>
 </html>
